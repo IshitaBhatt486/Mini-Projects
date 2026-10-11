@@ -1,0 +1,4 @@
+# No Python dependencies are required.
+# Luma is a static HTML/CSS/JavaScript game; it has no Python backend.
+# Local development and builds use Node.js 24 and its built-in modules.
+# Run npm install to initialize the Node project (no third-party packages).

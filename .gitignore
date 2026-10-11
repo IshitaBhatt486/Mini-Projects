@@ -1,0 +1,37 @@
+# Operating system and editor metadata
+desktop.ini
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+
+# JavaScript dependencies and build output
+node_modules/
+dist/
+coverage/
+.vercel/
+npm-debug.log*
+
+# Python environments, caches, and generated training artifacts
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+data/
+models/
+logs/
+*.keras
+*.h5
+
+# Local configuration and secrets
+.env
+.env.*
+!.env.example
+
+# Tool-generated logs
+*.log
+
+# Downloaded/generated data for the anatomy explorer (large, reproducible cache)
+human-anatomy-explorer/.cache/

@@ -1,0 +1,79 @@
+body{
+    height: 100vh;
+    background-color: hsl(0, 0%, 95%);
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#calculator{
+    font-family: Arial, sans-serif;
+    background-color: hsl(0, 0%, 15%);
+    border-radius: 15px;
+    max-width: 500px;
+    overflow: hidden; 
+    /*overflow- when the content is too big to fit in the screen,
+        visible=content renders outside the box
+        hidden=rest of the content is invisible
+        scroll=scrollbar
+        auto=only adds scrollbars when necesssary 
+    */
+}
+
+#display{
+    width: 100%;
+    background-color: hsl(0, 0%, 20%);
+    color: white;
+    font-size: 5rem;
+    padding: 20px;
+    border: none;
+    text-align: left;
+}
+
+/*grid*/
+#buttons{
+    display: grid; /*uses grid since we want only a specific number of rows and columns*/
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 25px;
+}
+
+/*buttons(grey)*/
+button{
+    width: 100px;
+    height: 100px;
+    background-color: hsl(0, 0%, 30%);
+    color: white;
+    border-radius: 50px;
+    border: none;
+    font-size: 3rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: hsl(0, 0%, 40%);
+}
+
+button:active{
+    background-color: hsl(0, 0%, 50%);
+}
+
+/*operators(orange)*/
+.operators{
+    background-color: hsl(35, 100%, 55%);
+}
+
+.operators:hover{
+    background-color: hsl(35, 100%, 65%);
+}
+
+.operators:active{
+    background-color: hsl(35, 100%, 75%);
+}
+
+/*equal-to(green)*/
+.equalto{
+    background-color: rgb(21, 201, 21);
+}

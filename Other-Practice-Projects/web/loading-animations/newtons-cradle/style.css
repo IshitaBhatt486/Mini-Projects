@@ -1,0 +1,88 @@
+body{
+    background-color: black;
+}
+
+.top{
+    height: 30px;
+    width: 225px;
+    background-color: #f9c805;
+
+    border-radius: 12px;
+    border-bottom: 22px solid; /*to make it flat at the top*/
+
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    
+    align-items: center;
+
+    display: flex;
+    flex-direction: row;/*making this into a flex box helps in arranging the items in a row like manner*/
+}
+
+.string{
+    background-color: #f9c805;
+    height: 180px;
+    width: 5px;
+
+    position: relative;
+    top: 100px;
+
+    margin-left: 20px;
+    margin-right: 20px;
+
+    transform-origin: top;
+
+}
+
+/* having the ball and string to be the same object makes it easier to animate*/
+
+.string:after{
+    height: 45px;
+    width: 45px;
+    background-color: rgb(57, 234, 175);
+
+    position: absolute;
+    content: ""; /*the key*/
+    
+    border-radius: 50%;
+
+    bottom: 0px;/*positioning of the balls relative to the string bottom(i.e. string after)*/
+    left: -18px;
+
+}
+
+.string:first-child{
+    animation: swing1 1.2s infinite linear;
+}
+
+@keyframes swing1 { /*defining swing 1*/
+    25% {
+        transform: rotate(50deg);
+    }
+    50% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.string:last-child{
+    animation: swing2 1.2s 0.6s infinite linear; /*added delay of 0.6s*/
+}
+
+@keyframes swing2 { /*defining swing 1*/
+    25% {
+        transform: rotate(-50deg);
+    }
+    50% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}

@@ -1,0 +1,35 @@
+#buttons, h1, .counter{
+    text-align: center;
+}
+
+.counter{
+    padding-bottom: 50px;
+    padding-top: 50px;
+}
+
+#countLabel{
+    font-size: 100px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1{
+font-family: cursive;}
+
+button{
+    font-family: cursive;
+    font-size: 20px;
+    background-color: hsl(180, 100%, 50%);
+    margin-left: 20px;
+    margin-right: 20px;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.25s;
+    transition: box-shadow 0.25s;
+}
+
+button:hover{
+    background-color:  hsl(180, 88%, 40%);;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);
+}

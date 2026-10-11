@@ -1,0 +1,137 @@
+body {
+    background-color: black;
+    margin: 0;
+    height: 100vh; /* Ensure full viewport height. this will make it easier to position the inner divs rrelative to the body */
+}
+
+.box {
+    height: 300px;
+    width: 300px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centering Trick */
+}
+
+.sqr1, .sqr2, .sqr3, .sqr4{
+    position: relative;
+    height: 135px;/*5px+5px(border)*/
+    width: 135px;
+    border: 5px solid aqua;
+    box-shadow: 0 0 10px aqua inset;
+    position: absolute;
+
+}
+.sqr1{/*quadrant 1*/
+    top: 0px;  /* Aligns to the top */
+    right: 0px; /* Aligns to the right */
+    animation: flip1 1.5s 1s;
+    transform-origin: left;
+    animation-timing-function: linear; /*to make animation smoother, use linear. ease causes slow transitions*/
+    animation-fill-mode: forwards;
+}
+.sqr2{/*quadrant 2*/
+    top: 0px;
+    left: 0px;
+    animation: flip2 1.5s 2.5s;
+    transform-origin: bottom;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+.sqr3{/*quadrant 3*/
+    bottom: 0px;
+    left: 0px;
+    animation: flip3 1.5s 4s;
+    transform-origin: right;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+.sqr4{/*quadrant 4*/
+    bottom: 0px;
+    right: 0px;
+    animation: flip4 1.5s 5.5s;
+    transform-origin: top;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+
+@keyframes flip1 {
+    0%{
+        transform: rotateY(0deg);
+    }
+    25%{
+        transform: rotateY(45deg) translateX(3px);
+    }
+    50%{
+        transform: rotateY(90deg) translateX(6px);
+    }
+    75%{
+        transform: rotateY(135deg) translateX(8px);
+    }
+    99%{
+        transform: rotateY(180deg) translateX(10px);
+    }
+    100%{
+        opacity: 0;
+    }
+}
+@keyframes flip2 {
+    0%{
+        transform: rotateX(0deg);
+    }
+    25%{
+        transform: rotateX(45deg) translateY(-3px);
+    }
+    50%{
+        transform: rotateX(90deg) translateY(-6px);
+    }
+    75%{
+        transform: rotateX(135deg) translateY(-8px);
+    }
+    99%{
+        transform: rotateX(180deg) translateY(-10px);
+    }
+    100%{
+        opacity: 0;
+    }
+}
+@keyframes flip3 {
+    0%{
+        transform: rotateY(0deg);
+    }
+    25%{
+        transform: rotateY(45deg) translateX(-3px);
+    }
+    50%{
+        transform: rotateY(90deg) translateX(-6px);
+    }
+    75%{
+        transform: rotateY(135deg) translateX(-8px);
+    }
+    99%{
+        transform: rotateY(180deg) translateX(-10px);
+    }
+    100%{
+        opacity: 0;/*use opacity = 0 instead of visibility=hidden, since it causes flickering*/
+    }
+}
+@keyframes flip4 {
+    0%{
+        transform: rotateX(0deg);
+    }
+    25%{
+        transform: rotateX(45deg) translateY(3px);
+    }
+    50%{
+        transform: rotateX(90deg) translateY(6px);
+    }
+    75%{
+        transform: rotateX(135deg) translateY(8px);
+    }
+    99%{
+        transform: rotateX(180deg) translateY(10px);
+    }
+    100%{
+        opacity: 0%;
+    }
+}

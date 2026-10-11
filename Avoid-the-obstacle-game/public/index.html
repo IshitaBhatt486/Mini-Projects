@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#e9dcc5">
+<title>Luma — A little lift</title>
+<link rel="stylesheet" href="./src/styles.css">
+</head>
+<body>
+<canvas id="scene" aria-label="Luma: a 3D tap-to-fly game over an endless sea"></canvas>
+<div class="grain"></div><div class="vignette"></div>
+<header>
+  <div class="brand"><div class="brand-mark" aria-hidden="true"></div><div><div class="brand-name">LUMA</div><div class="brand-tag">A little lift</div></div></div>
+  <div class="tools">
+    <button class="icon-button" id="pauseButton" aria-label="Pause game" title="Pause (P)"><svg viewBox="0 0 24 24"><path d="M8 5v14M16 5v14"/></svg></button>
+    <button class="icon-button" id="soundButton" aria-label="Enable sound" aria-pressed="false" title="Sound"><svg viewBox="0 0 24 24"><path d="M11 5L6 9H3v6h3l5 4z"/><path id="soundWaves" d="m16 9 6 6m0-6-6 6"/></svg></button>
+  </div>
+</header>
+<div id="scoreboard"><div id="score">0</div><div class="score-label">Gaps passed</div></div>
+<section class="screen" id="intro">
+  <div class="intro-copy"><div class="eyebrow">A small escape</div><h1>Lum<em>a</em></h1><p class="subtitle">One small wingbeat.<br>An endless ocean of possibility.</p></div>
+  <div class="start-actions"><button class="primary" id="startButton">Take flight <span aria-hidden="true">↗</span></button><div class="hint">Tap anywhere to flap<span class="keyboard-hint"> <span style="opacity:.4">/</span> press <span class="key">SPACE</span></span></div></div>
+</section>
+<div id="flightHint">TAP TO STAY ALOFT</div>
+<section class="screen" id="endScreen" hidden aria-labelledby="endTitle"><div class="card"><div class="eyebrow" id="endEyebrow">A moment in the sky</div><h2 id="endTitle">A lovely little flight.</h2><p id="endMessage">The ocean has room for another.</p><div class="stats"><div class="stat"><strong id="finalScore">0</strong><small>This flight</small></div><div class="stat"><strong id="bestScore">0</strong><small>Personal best</small></div></div><button class="primary" id="retryButton">Fly again <span aria-hidden="true">↗</span></button><p class="hint">A little lift goes a long way.</p></div></section>
+<section class="screen" id="pauseScreen" hidden aria-labelledby="pauseTitle"><div class="card"><div class="eyebrow">Take a breath</div><h2 id="pauseTitle">Just floating.</h2><p>Your little patch of sky can wait.</p><button class="primary" id="resumeButton">Keep flying <span aria-hidden="true">↗</span></button></div></section>
+<footer><span>One tap<span class="dot"></span>One more horizon</span><span id="footerBest">Best &nbsp; 00</span></footer>
+<div id="flash"></div><div id="error"><div><h2>A little more sky, please.</h2><p>This game needs WebGL. Try opening it in a recent Safari, Chrome, or Firefox browser.</p></div></div>
+<script src="./src/game.js" defer></script>
+</body>
+</html>

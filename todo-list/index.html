@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#ff8fbb">
+    <title>Sweet List</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fredoka:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="app-shell">
+        <section class="todo-card" aria-labelledby="page-title">
+            <header class="hero">
+                <div>
+                    <p class="eyebrow" id="today"></p>
+                    <h1 id="page-title">Hello, fabulous!<br><em>Let's do this.</em></h1>
+                </div>
+                <div class="sun-mark" aria-hidden="true"><span>♥</span></div>
+            </header>
+            <section class="progress-panel" aria-label="Task progress">
+                <div class="progress-copy"><span class="progress-label">Today's little wins</span><strong id="progressText">0 of 0 complete</strong></div>
+                <span class="progress-percent" id="progressPercent">0%</span>
+                <div class="progress-track" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-label="Completion progress"><div class="progress-bar" id="progressBar"></div></div>
+            </section>
+            <form class="new-task-form" id="newTaskForm">
+                <label class="sr-only" for="newTask">New task</label>
+                <input type="text" placeholder="Add a tiny mission..." id="newTask" maxlength="120" autocomplete="off">
+                <button id="newTaskButton" type="submit" aria-label="Add task"><span aria-hidden="true">+</span><span class="add-text">Add magic</span></button>
+            </form>
+            <section class="list-section" aria-labelledby="list-title">
+                <div class="list-heading"><h2 id="list-title">Your list</h2><button class="clear-completed" id="clearCompleted" type="button" hidden>Clear completed</button></div>
+                <div id="tasksContainer" class="tasks-container" aria-live="polite"></div>
+                <div class="empty-state" id="emptyState"><div class="empty-icon" aria-hidden="true">♡</div><p>Your list is all sparkly and empty.<br>Add a tiny mission!</p></div>
+            </section>
+        </section>
+        <p class="footer-note">You are doing fantastic, okay?</p>
+    </main>
+    <script src="index.js"></script>
+</body>
+</html>

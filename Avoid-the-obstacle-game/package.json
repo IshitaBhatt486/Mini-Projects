@@ -1,0 +1,15 @@
+{
+  "name": "luma",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A small, self-contained 3D tap-to-fly browser game.",
+  "scripts": {
+    "dev": "node scripts/serve.mjs",
+    "build": "node --check public/src/game.js && node scripts/build.mjs",
+    "preview": "node scripts/serve.mjs --preview",
+    "start": "npm run dev"
+  },
+  "engines": {
+    "node": "24.x"
+  }
+}
