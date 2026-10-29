@@ -1,0 +1,3 @@
+### Climate Clock | Environmental Monitoring & Digital Display
+
+Developed a real-time digital countdown system visualizing the time remaining before global warming reaches the critical 1.5°C threshold above pre-industrial levels. Integrated electronic display components to present a continuously updating countdown, translating complex climate science into an intuitive, time-based representation of the climate crisis. The project combines embedded electronics, digital timekeeping, and environmental awareness to communicate the urgency of global decarbonization.
